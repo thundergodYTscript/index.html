@@ -1,0 +1,1238 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080510">
+<meta name="description" content="NextWeb Studio creates modern, responsive websites for businesses, creators and startups. Contact us on WhatsApp or Instagram.">
+<title>NextWeb Studio | Creative Website Design</title>
+
+<style>
+:root {
+  --bg: #080510;
+  --card: #120b20;
+  --purple: #8b35ff;
+  --pink: #d16aff;
+  --white: #f8f5ff;
+  --muted: #b8afc9;
+  --border: #34204f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 5, 16, .94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #261535;
+}
+
+nav {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.logo span,
+.purple {
+  color: var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #d9d0e8;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--pink);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #7924ff, #b34aff);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px #8b35ff50;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #8d69b8;
+}
+
+.btn-outline:hover {
+  background: #8b35ff22;
+}
+
+.instagram-btn {
+  background: linear-gradient(120deg, #7935ff, #e1306c, #ff914d);
+  color: white;
+  border: none;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: white;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 570px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #d8b4ff;
+  background: #8b35ff20;
+  border: 1px solid #7934bd66;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5.5vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #963aff, #dfaaff);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 2.5vw, 29px);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-art {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  background: #7a22ff;
+  filter: blur(100px);
+  opacity: .35;
+  z-index: -1;
+}
+
+.screen {
+  width: 100%;
+  max-width: 440px;
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid #8547d6;
+  background: linear-gradient(140deg, #201038, #0b0713);
+  box-shadow: 0 0 45px #7724ff30;
+  transform: perspective(800px) rotateY(-5deg);
+}
+
+.screen-top {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid #37224d;
+  padding-bottom: 15px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #b45cff;
+}
+
+.screen-content {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.big-n {
+  font-size: 105px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #a95cff;
+  text-shadow: 0 0 45px #8b35ff99;
+}
+
+.screen-content h3 {
+  font-size: 24px;
+}
+
+.screen-content p {
+  margin: 8px 0 20px;
+  font-size: 13px;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 80px 0;
+  scroll-margin-top: 75px;
+}
+
+.section-head {
+  max-width: 680px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+.section-label {
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-head h2 {
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 27px;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, #150d24, #0d0916);
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple);
+}
+
+.service-icon {
+  font-size: 31px;
+  margin-bottom: 13px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-art {
+  min-height: 310px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: radial-gradient(circle, #482078, #170b29 55%, #0d0816);
+}
+
+.about-art span {
+  font-size: 155px;
+  font-weight: 900;
+  color: #a85cff;
+  text-shadow: 0 0 60px #8b35ff;
+}
+
+.about-copy h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 12px 0 20px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.check-list {
+  list-style: none;
+  margin: 20px 0 27px;
+}
+
+.check-list li {
+  margin: 10px 0;
+  color: #e4d9f3;
+}
+
+.check-list li::before {
+  content: "✓";
+  color: #bc7aff;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  border-color: #8750c9;
+}
+
+.project-preview {
+  min-height: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.project-preview .preview-icon {
+  font-size: 43px;
+  margin-bottom: 10px;
+}
+
+.project-preview h3 {
+  font-size: 27px;
+}
+
+.project-preview p {
+  margin-top: 7px;
+  font-size: 13px;
+}
+
+.preview-game {
+  background: linear-gradient(130deg, #160a2e, #472078);
+}
+
+.preview-business {
+  background: linear-gradient(130deg, #123d38, #101e25);
+}
+
+.preview-shop {
+  background: linear-gradient(130deg, #4a250c, #25140e);
+}
+
+.preview-creator {
+  background: linear-gradient(130deg, #152a52, #17102b);
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 8px 0 15px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #8b35ff20;
+  color: #d0a7ff;
+  font-size: 11px;
+  margin: 3px 4px 0 0;
+}
+
+.portfolio-note {
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-card {
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.process-number {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(130deg, #7825ef, #b052ff);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.process-card h3 {
+  margin-bottom: 9px;
+}
+
+.process-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* WHY US */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 24px;
+  background: #100a1b;
+  border-left: 2px solid var(--purple);
+}
+
+.why-card h3 {
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact-box {
+  border: 1px solid #6934a0;
+  border-radius: 22px;
+  padding: 55px 25px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #491b78 0%, transparent 65%),
+    #10091b;
+}
+
+.contact-box h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.contact-box > p {
+  color: var(--muted);
+  max-width: 570px;
+  margin: 0 auto 25px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-details {
+  margin-top: 25px;
+  color: #e0d4f2;
+  font-size: 14px;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #2b1a3c;
+  padding: 30px 0 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.footer-top p,
+.footer-bottom {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px;
+  font-size: 13px;
+  color: #d3c7e4;
+}
+
+.footer-links a:hover {
+  color: var(--pink);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 17px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: #e4d1ff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple);
+}
+
+.social-instagram:hover {
+  background: linear-gradient(120deg, #7935ff, #e1306c);
+  color: white;
+}
+
+.social-whatsapp:hover {
+  background: #25d366;
+  color: #052c15;
+}
+
+.footer-bottom {
+  border-top: 1px solid #241632;
+  margin-top: 24px;
+  padding-top: 17px;
+  text-align: center;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 90;
+  right: 20px;
+  bottom: 20px;
+  padding: 13px 17px;
+  border-radius: 50px;
+  background: #25d366;
+  color: #052c15;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 5px 25px #25d36640;
+  transition: .2s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 91%;
+  }
+
+  nav {
+    min-height: 68px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 68px;
+    padding: 20px 5%;
+    background: #0d0717;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 45px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-art {
+    min-height: 260px;
+  }
+
+  .screen-content {
+    min-height: 200px;
+  }
+
+  .big-n {
+    font-size: 78px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .about-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-art {
+    min-height: 240px;
+  }
+
+  .about-art span {
+    font-size: 120px;
+  }
+
+  .process-grid {
+    gap: 8px;
+  }
+
+  .contact-box {
+    padding: 40px 18px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    gap: 14px;
+  }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 11px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a href="#home" class="logo">
+      NextWeb <span>Studio.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="btn nav-cta">Let's Talk ↗</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow">✦ YOUR IDEAS. OUR CREATIVITY.</div>
+
+    <h1>We Build <span>Websites</span> That Stand Out.</h1>
+
+    <h2>Modern. Creative. Built for You.</h2>
+
+    <p>
+      Welcome to NextWeb Studio! We create stylish, responsive
+      and user-friendly websites for businesses, brands, creators
+      and entrepreneurs. Let's turn your idea into an online
+      experience that makes an impression.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn">Start Your Project ↗</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="screen">
+      <div class="screen-top">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="screen-content">
+        <div class="big-n">N.</div>
+        <h3>Build. Grow. Succeed.</h3>
+        <p>Ideas transformed into digital experiences.</p>
+        <a href="#portfolio" class="btn">Explore Our Work ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">What We Do</span>
+      <h2>Our <span class="purple">Services</span></h2>
+      <p>Everything you need to bring your ideas online.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Website Design</h3>
+        <p>Modern, attractive designs that represent your brand and create a great first impression.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Functional websites built with HTML, CSS and JavaScript to bring your ideas to life.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Mobile-Friendly Websites</h3>
+        <p>Responsive pages that adapt to phones, tablets, laptops and desktop screens.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🛍️</div>
+        <h3>Business Websites</h3>
+        <p>Professional websites for shops, restaurants, local businesses and growing brands.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Landing Pages</h3>
+        <p>Focused pages to promote products, services, events and new business ideas.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Website Updates</h3>
+        <p>Improve an existing website with fresh content, better layouts and useful features.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-art">
+      <span>N.</span>
+    </div>
+
+    <div class="about-copy">
+      <span class="section-label">About NextWeb Studio</span>
+      <h2>Turning Your Ideas Into a Digital Reality.</h2>
+
+      <p>
+        NextWeb Studio is a website design and development
+        business focused on helping people bring their ideas
+        online through modern and engaging websites.
+      </p>
+
+      <p>
+        Whether you need a business website, personal portfolio,
+        product page or landing page, we aim to create a solution
+        that matches your goals and your brand.
+      </p>
+
+      <ul class="check-list">
+        <li>Creative and modern website designs</li>
+        <li>Responsive layouts for different devices</li>
+        <li>Clear communication throughout the project</li>
+        <li>Websites tailored to your requirements</li>
+      </ul>
+
+      <a href="#contact" class="btn">Let's Work Together ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Our Portfolio</span>
+      <h2>Ideas Come to <span class="purple">Life.</span></h2>
+      <p>Explore some website concepts for different industries.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <article class="project">
+        <div class="project-preview preview-game">
+          <div class="preview-icon">🎮</div>
+          <h3>GameZone</h3>
+          <p>A bold gaming website concept.</p>
+        </div>
+        <div class="project-info">
+          <h3>Gaming Website</h3>
+          <p>A creative layout for gaming communities, game news and gaming content.</p>
+          <span class="tag">Gaming</span>
+          <span class="tag">Dark UI</span>
+          <span class="tag">Creative Design</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-preview preview-business">
+          <div class="preview-icon">🏢</div>
+          <h3>Business Pro</h3>
+          <p>A professional online presence.</p>
+        </div>
+        <div class="project-info">
+          <h3>Business Website</h3>
+          <p>A professional layout to showcase services, company information and contact details.</p>
+          <span class="tag">Business</span>
+          <span class="tag">Responsive</span>
+          <span class="tag">Professional</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-preview preview-shop">
+          <div class="preview-icon">🍯</div>
+          <h3>Honey Spoon</h3>
+          <p>A warm product website concept.</p>
+        </div>
+        <div class="project-info">
+          <h3>Product Website</h3>
+          <p>A product-focused design for presenting products, prices, brand details and enquiries.</p>
+          <span class="tag">Products</span>
+          <span class="tag">Branding</span>
+          <span class="tag">Contact</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-preview preview-creator">
+          <div class="preview-icon">✨</div>
+          <h3>Creator Space</h3>
+          <p>A personal brand website concept.</p>
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A personal website for presenting work, skills, projects and professional information.</p>
+          <span class="tag">Portfolio</span>
+          <span class="tag">Personal Brand</span>
+          <span class="tag">Modern UI</span>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="portfolio-note">
+      These are illustrative concepts. Replace them with your
+      actual completed projects as your portfolio grows.
+    </p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">How It Works</span>
+      <h2>Simple From <span class="purple">Start to Finish.</span></h2>
+      <p>A clear process to bring your website idea to life.</p>
+    </div>
+
+    <div class="process-grid">
+      <article class="process-card">
+        <div class="process-number">01</div>
+        <h3>Let's Talk</h3>
+        <p>Tell us about your business, goals and website requirements.</p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">02</div>
+        <h3>Design</h3>
+        <p>We plan the layout, colours, style and structure for your project.</p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">03</div>
+        <h3>Development</h3>
+        <p>We build the website and check its appearance across screens.</p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">04</div>
+        <h3>Launch</h3>
+        <p>After review and approval, we prepare the website for publishing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section id="why-us">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Why NextWeb Studio?</span>
+      <h2>Small Details. <span class="purple">Big Impact.</span></h2>
+      <p>Our focus is on useful design, usability and your goals.</p>
+    </div>
+
+    <div class="why-grid">
+      <article class="why-card">
+        <h3>⚡ Performance</h3>
+        <p>We aim to create efficient pages and a smooth browsing experience.</p>
+      </article>
+
+      <article class="why-card">
+        <h3>🎯 Your Vision</h3>
+        <p>Your requirements guide the design, content and features.</p>
+      </article>
+
+      <article class="why-card">
+        <h3>🤝 Direct Contact</h3>
+        <p>Discuss your project directly through WhatsApp or Instagram.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <span class="section-label">Let's Create Something Great</span>
+
+      <h2>Ready to Build Your <span class="purple">Website?</span></h2>
+
+      <p>
+        Have a business idea, a new brand or a project in mind?
+        Contact NextWeb Studio to discuss what you need.
+        Let's bring your idea online.
+      </p>
+
+      <div class="contact-buttons">
+        <a class="btn" href="https://wa.me/918178933175"
+           target="_blank" rel="noopener noreferrer">
+          ☎ Chat on WhatsApp ↗
+        </a>
+
+        <a class="btn instagram-btn"
+           href="https://www.instagram.com/nextweb_pixel/"
+           target="_blank" rel="noopener noreferrer">
+          📸 Follow on Instagram ↗
+        </a>
+      </div>
+
+      <div class="contact-details">
+        <p>WhatsApp / Phone: <strong>8178933175</strong></p>
+        <p>Instagram: <strong>@nextweb_pixel</strong></p>
+        <p>Business: <strong>NextWeb Studio</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="#home" class="logo">
+          NextWeb <span>Studio.</span>
+        </a>
+        <p>Create. Build. Grow.</p>
+
+        <div class="footer-socials">
+          <a class="social-link social-instagram"
+             href="https://www.instagram.com/nextweb_pixel/"
+             target="_blank" rel="noopener noreferrer">
+            📸 Instagram
+          </a>
+
+          <a class="social-link social-whatsapp"
+             href="https://wa.me/918178933175"
+             target="_blank" rel="noopener noreferrer">
+            ☎ WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> NextWeb Studio. All rights reserved.</p>
+      <p>Built with creativity and code.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a class="whatsapp-float"
+   href="https://wa.me/918178933175"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contact NextWeb Studio on WhatsApp">
+  ☎ WhatsApp
+</a>
+
+<script>
+  // Automatic copyright year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Mobile navigation
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  menuBtn.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+  });
+
+  // Close the mobile menu after choosing a section
+  document.querySelectorAll("#navLinks a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "☰";
+    });
+  });
+</script>
+
+</body>
+</html>
